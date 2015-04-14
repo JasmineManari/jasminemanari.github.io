@@ -9,11 +9,10 @@
     <title>Espiazioni &middot; {{ page.title }}</title>
   </head>
   <body>
-    <div class="container-fluid">
+    {% include menu.html %}
 
     {{ content }}
 
-      {% include footer.html %}
-    </div>
+    {% include footer.html %}
   </body>
 </html>

@@ -1,16 +1,22 @@
 ---
 ---
 
-@import fonts, colors
+@import fonts, colors, mixins
 
-@import bootstrap/variables
-@import bootstrap/mixins/clearfix
-@import bootstrap/mixins/grid-framework
-@import bootstrap/mixins/grid
-@import bootstrap/grid
+html
+  width: 100%
+  height: 100%
 
 body
   font: 100% $font2, sans-serif
+  height: 100%
+  width: 100%
+  margin: 0
+
+footer
+  height: 100px
+  .logo, .copyright
+    line-height: 100px
 
 h1
   font-family: $font1

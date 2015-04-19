@@ -1,7 +1,7 @@
 ---
 ---
 
-@import fonts, colors, mixins
+@import fonts, colors, style, mixins
 
 html
   width: 100%
@@ -12,11 +12,26 @@ body
   height: 100%
   width: 100%
   margin: 0
+  background-color: $dark
 
 footer
-  height: 100px
+  font-family: $font3
+  color: rgba(255, 255, 255, 0.27)
+  position: absolute
+  bottom: 15px
+  width: 100%
   .logo, .copyright
-    line-height: 100px
+    line-height: 40px
+    font-size: 13px
+  img
+    margin: 0 5px
+    height: 40px
+    width: auto
+    opacity: 0.4
+    transition: opacity 0.4s cubic-bezier(0.75, 0, 0.125, 1)
+    &:hover
+      opacity: 0.6
+
 
 h1
   font-family: $font1
@@ -24,6 +39,16 @@ h1
 h2
   font-family: $font1
 
+.link
+  color: $orange
+  font-family: $font2
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+  &:visited
+    color: $orange
+.border
+  border-radius: $border-radius
 
 .space-buffer
   height: 120px
@@ -40,26 +65,64 @@ h2
   margin-top: 60px
 
 .jumbotron
+  @include jumbotron
   background-image: url(http://placehold.it/1600x900)
-  background-position: 50% 0
-  background-repeat: no-repeat
-  background-size: cover
-  min-height: 400px
-  padding: 50px 0
+.jumbotron-contact
+  @include jumbotron
+  @include overlay
+  background-image: url(/assets/img/contact-head.jpg)
+
 
 .content-overlay
   margin-top: -80px
   padding: 60px 30px
   background-color: white
-
+  border-radius: $border-radius
 .thumb-overlay
   margin-top: -80px
-  padding: 5px
-  background-color: white
+  border-radius: $border-radius
+  img
+    border-radius: $border-radius
+    border: 5px solid white
 .small-thumb-overlay
   margin-top: -45px
-  padding: 5px
+  border-radius: $border-radius
+  img
+    border-radius: $border-radius
+    border: 5px solid white
+
+
+.btn
+  display: inline-block
+  position: relative
+  height: auto
+  width: 100%
+  text-decoration: none
+  font-family: $font3
   background-color: white
+  color: $orange
+  padding: 8px 12px
+  line-height: 18px
+  border-radius: $border-radius
+  transition: color 0.4s cubic-bezier(0.75, 0, 0.125, 1), background-color 0.6s ease-in-out
+  &:before
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    content: ''
+    opacity: 1
+    border-radius: $border-radius
+    border: 2px solid $orange
+    transition: opacity 0.4s cubic-bezier(0.75, 0, 0.125, 1), border 0.4s cubic-bezier(0.75, 0, 0.125, 1), transform 0.4s cubic-bezier(0.75, 0, 0.125, 1)
+  &:hover
+    color: $yellow
+    background-color: $dark
+    &:before
+      transform: scale3d(1.2, 1.2, 1)
+      border: 1px solid
+      opacity: 0
 
 
 .menu
@@ -68,13 +131,12 @@ h2
   padding: 0
   text-align: center
   font-family: $font1
-  background-color: $blue
   .menuentry
     display: inline-block
     width: 10%
     text-align: center
     a
-      transition: color 0.3s ease-out
+      transition: color 0.4s ease-out
       display: block
       padding: 20px 0
       text-decoration: none

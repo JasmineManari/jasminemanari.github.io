@@ -1,0 +1,26 @@
+
+$border-radius: 2px
+
+@mixin jumbotron
+  background-position: 0% 100%
+  background-repeat: no-repeat
+  background-size: cover
+  min-height: 400px
+  padding: 50px 0
+  position: relative
+  h1
+    color: $white
+    text-shadow: 0 0 12px #000
+
+@mixin pattern
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAG0lEQVQIW2NkYGD4z8DAwMgABXAGNgGwSgwVAFbmAgXxvZSoAAAAAElFTkSuQmCC)
+  background-repeat: repeat
+
+@mixin overlay
+  &:before
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    @include pattern

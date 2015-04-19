@@ -13,13 +13,17 @@ body
   width: 100%
   margin: 0
   background-color: $dark
+  #body
+    height: auto
+    min-height: 100%
 
 footer
   font-family: $font3
   color: rgba(255, 255, 255, 0.27)
-  position: absolute
-  bottom: 15px
+  position: relative
+  margin-top: -55px
   width: 100%
+  clear: both
   .logo, .copyright
     line-height: 40px
     font-size: 13px
@@ -70,7 +74,7 @@ h2
 .jumbotron-contact
   @include jumbotron
   @include overlay
-  background-image: url(/assets/img/contact-head.jpg)
+  background-image: url(../img/contact-head.jpg)
 
 
 .content-overlay

@@ -45,6 +45,10 @@ h1
 h2
   font-family: $font1
 
+button
+  border: 0
+  cursor: pointer
+
 .link
   color: $orange
   font-family: $font2
@@ -82,6 +86,16 @@ h2
   @include overlay
   background-position: 50% 50%
   background-image: url(../img/trailer-head.jpg)
+.jumbotron-sponsors
+  @include jumbotron
+  @include overlay
+  background-position: 50% 50%
+  background-image: url(../img/sponsors-head.jpg)
+.jumbotron-synopsis
+  @include jumbotron
+  @include overlay
+  background-position: 50% 40%
+  background-image: url(../img/synopsis-head.jpg)
 
 
 .content-overlay
@@ -106,8 +120,6 @@ h2
 .btn
   display: inline-block
   position: relative
-  height: auto
-  width: 100%
   text-decoration: none
   font-family: $font3
   background-color: $dark

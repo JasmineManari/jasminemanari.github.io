@@ -3,11 +3,10 @@ layout: page
 title : About
 ---
 
-<div class="jumbotron">
+<div class="jumbotron-synopsis">
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-offset-2 col-md-4">
-        <h1>Synopsis</h1>
       </div>
     </div>
   </div>
@@ -16,9 +15,18 @@ title : About
 <div class="container-fluid">
   <div class="row">
     <div class="content-overlay col-md-offset-3 col-md-6">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies justo eu tincidunt rhoncus. Maecenas lacinia imperdiet volutpat. Curabitur egestas mollis sagittis. Donec blandit nunc felis, lobortis consectetur nisi vulputate id. Maecenas et rutrum quam, vel scelerisque augue. Ut at diam lacinia, congue mauris a, malesuada ante. Nam eget velit sed ante fringilla vehicula. Cras id ultrices neque.</p>
-      <p>Integer blandit nunc ut metus maximus, nec tincidunt nisi ullamcorper. Phasellus convallis, lacus vel finibus molestie, sapien lorem pharetra lacus, vel finibus ipsum neque sit amet augue. Pellentesque volutpat sed purus ut consequat. Proin quis justo tortor. Sed a nunc turpis. Cras in libero mattis, rhoncus lorem a, porta odio. Fusce gravida cursus libero sed placerat. Quisque ut gravida leo.
-      </p>
+      <div class="row">
+        <button class="btn col-md-3" onclick="document.getElementById('synopsis-english').style.display='block';document.getElementById('synopsis-italian').style.display='none';">English</button>
+        <button class="btn col-md-offset-6 col-md-3" onclick="document.getElementById('synopsis-english').style.display='none';document.getElementById('synopsis-italian').style.display='block';">Italian</button>
+      </div>
+      <div id="synopsis-english" style="display:block;">
+        <p>"Unbearable to the soul" is the meaning of Thomas’s tragedy, a thirty years old man who finds out to be affected by an early-onset of Alzheimer disease, inherited from his mother, Alma, to whom he is devoting his last thoughts while going through frustrating hallucinations due to his disease, about which he is informed by Alvise, his mother’s same psychiatrist.</p>
+        <p>Being still partially aware of his irreversible health conditions, Thomas begins to recall some moments of his life, above all those spent with his wife Nadia and his son-in-law Angelo; importantly, they both stands for what he defines "the two Suns that never go down" and a unique "cure from loneliness", which is the only true disease in Thomas’s life. Indeed, ten years before, Thomas was actually Mara, a twenty-one years old woman dead tired by a gender identity disorder, temporarily overcome with a hormone cure thanks to which she became "her own twin": Thomas.</p>
+        <p>Moreover, before going under surgery, Mara had recorded her voice on a cassette in order to pour out and, contemporarily, preserve truth about her hated being. Therefore, overwhelmed by his-her memories, Thomas-Mara decides to listen to that cassette, which he-sheh as never dared to listen to and, at the very end, he-she adds his-her last moments of lucidity and ultimately destroys every single object-memory in his bedroom but one: the cassette.</p>
+      </div>
+      <div id="synopsis-italian" style="display:none;">
+        <p>Note to self: Ahem, character encoding broke when I copied the italian one :/ Deal with it later.</p>
+      </div>
     </div>
   </div>
 </div>

@@ -45,8 +45,9 @@ h1
 h2
   font-family: $font1
 h3
-  font-family: $font1
-  margin: 0
+  font-family: $font3
+  text-align: right
+  margin-right: 25px
 
 button
   border: 0
@@ -77,7 +78,7 @@ button
 .half-top-buffer
   margin-top: 60px
 .quarter-top-buffer
-  margin-top: 60px
+  margin-top: 20px
 
 .jumbotron
   @include jumbotron
@@ -120,6 +121,10 @@ button
   padding: 60px 30px
   background-color: $white
   border-radius: $border-radius
+.narrow-content-overlay
+  padding: 10px
+  background-color: $white
+  border-radius: $border-radius
 .thumb-overlay
   margin-top: -80px
   border-radius: $border-radius
@@ -137,10 +142,11 @@ button
 .top-buffer
   margin-top: 40px
 .block-overlay
+  padding: 60px 30px
+  background-color: $white
   border-radius: $border-radius
   .bio
     line-height: 23px
-    background-color: $white
     border-radius: $border-radius
   &.right
     padding-right: 15px
@@ -175,6 +181,8 @@ button
     border: 1px solid $orange
     transform: scale3d(0.6, 0.6, 1)
     transition: opacity 0.3s cubic-bezier(0.75, 0, 0.125, 1), border 0.3s cubic-bezier(0.75, 0, 0.125, 1), transform 0.3s cubic-bezier(0.75, 0, 0.125, 1)
+  &:focus
+    outline: none
   &:hover
     color: $orange
     background-color: $white

@@ -1,7 +1,7 @@
 
 define(function () {
 
-  var crew = ["assets/img/crew-head0.jpg", "assets/img/crew-head1.jpg", "assets/img/crew-head2.jpg", "assets/img/crew-head3.jpg"];
+  var crew = ["assets/img/crew-head0.jpg", "assets/img/crew-head1.jpg", "assets/img/crew-head2.jpg"];
   var crewIdx = 1;
 
   return {

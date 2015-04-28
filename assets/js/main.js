@@ -9,6 +9,9 @@ require(["background"], function(background) {
   if (docs.length > 0) {
     for (var i = 0; i < docs.length; i++) {
       docs[i].addEventListener("click", function (event) {
+
+        document.getElementsByClassName('hidden-block')[0].style.visibility = 'visible';
+
         var toShow = document.getElementById(event.target.attributes['data-content-show-id'].value);
         var toHide = document.getElementsByClassName('cs-text-active');
 

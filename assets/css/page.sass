@@ -34,7 +34,7 @@ footer
     height: 40px
     width: auto
     opacity: 0.4
-    transition: opacity 0.4s ease-out
+    @include transition(opacity 0.4s ease-out)
     &:hover
       opacity: 0.8
 
@@ -107,21 +107,24 @@ button
   @include overlay
   background-position: 50% 40%
   background-image: url(../img/crew-head0.jpg)
-  transition: background-image 0.5s ease-in-out
+  @include transition(background-image 0.5s ease-in-out)
 .jumbotron-cast
   @include jumbotron
   @include overlay
   background-position: 50% 80%
   background-image: url(../img/cast-head0.jpg)
-  transition: background-image 0.5s ease-in-out
+  @include transition(background-image 0.5s ease-in-out)
 .jumbotron-news
   @include jumbotron
   @include overlay
   background-position: 50% 30%
   background-image: url(../img/news-head.jpg)
-  transition: background-image 0.5s ease-in-out
 
 
+.center-img
+  img
+    margin-left: auto
+    margin-right: auto
 .content-overlay
   margin-top: -80px
   padding: 60px 30px
@@ -147,6 +150,8 @@ button
   margin-top: -80px
 .top-buffer
   margin-top: 40px
+.bottom-buffer
+  margin-bottom: 40px
 .block-overlay
   padding: 60px 120px
   background-color: $white
@@ -164,6 +169,7 @@ button
 
 
 .btn
+  cursor: pointer
   display: inline-block
   position: relative
   text-decoration: none
@@ -173,7 +179,7 @@ button
   padding: 8px 12px
   line-height: 18px
   border-radius: $border-radius
-  transition: color 0.3s cubic-bezier(0.75, 0, 0.125, 1), background-color 0.3s ease-in-out
+  @include transition(color 0.3s cubic-bezier(0.75, 0, 0.125, 1), background-color 0.3s ease-in-out)
   &:before
     cursor: pointer
     position: absolute
@@ -185,15 +191,15 @@ button
     opacity: 0
     border-radius: $border-radius
     border: 1px solid $orange
-    transform: scale3d(0.6, 0.6, 1)
-    transition: opacity 0.3s cubic-bezier(0.75, 0, 0.125, 1), border 0.3s cubic-bezier(0.75, 0, 0.125, 1), transform 0.3s cubic-bezier(0.75, 0, 0.125, 1)
+    @include scale(0.6, 0.6, 1)
+    @include transition(opacity 0.3s cubic-bezier(0.75, 0, 0.125, 1), border 0.3s cubic-bezier(0.75, 0, 0.125, 1), transform 0.3s cubic-bezier(0.75, 0, 0.125, 1))
   &:focus
     outline: none
   &:hover
     color: $orange
     background-color: $white
     &:before
-      transform: scale3d(1, 1, 1)
+      @include scale(1, 1, 1)
       border: 2px solid
       opacity: 1
 
@@ -216,7 +222,7 @@ button
       text-decoration: none
       color: $orange
       border-radius: $border-radius
-      transition: color 0.3s cubic-bezier(0.75, 0, 0.125, 1), background-color 0.5s ease-in-out
+      @include transition(color 0.3s cubic-bezier(0.75, 0, 0.125, 1), background-color 0.5s ease-in-out)
       &:hover
         color: $orange
         background-color: $white
@@ -228,3 +234,12 @@ button
   display: none
 .cs-text-active
   display: block
+
+.hidden-block
+  visibility: hidden
+.post-date
+  font-style: italic
+
+.animated
+  @include animation-delay(0.5s)
+  @include animation-duration(4s)

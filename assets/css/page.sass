@@ -53,6 +53,11 @@ button
   border: 0
   cursor: pointer
 
+hr
+  border-style: solid
+  border-color: $black
+  border-radius: $border-radius
+
 .link
   color: $orange
   font-family: $font2
@@ -63,6 +68,11 @@ button
     color: $orange
 .border
   border-radius: $border-radius
+.border-colored
+  border-radius: $border-radius
+  border-style: solid !important
+  border-width: 3px !important
+  border-color: $dark !important
 .flex
   display: flex
 
@@ -240,6 +250,10 @@ button
 .post-date
   font-style: italic
 
-.animated
+.t1
   @include animation-delay(0.5s)
-  @include animation-duration(4s)
+  @include animation-duration(1.5s)
+.t2
+  @include animation-delay(1.25s)
+  @include animation-duration(1.5s)
+

@@ -26,8 +26,8 @@
           animation-name: $name;
 }
 @mixin animation-duration($duration) {
-  -webkit-animation-duration: $duration;
-          animation-duration: $duration;
+  -webkit-animation-duration: $duration !important;
+          animation-duration: $duration !important;
 }
 @mixin animation-timing-function($timing-function) {
   -webkit-animation-timing-function: $timing-function;

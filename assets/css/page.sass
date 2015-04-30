@@ -66,6 +66,8 @@ hr
     text-decoration: underline
   &:visited
     color: $orange
+.whited
+  background-color: $white
 .border
   border-radius: $border-radius
 .border-colored
@@ -163,19 +165,22 @@ hr
 .bottom-buffer
   margin-bottom: 40px
 .block-overlay
-  padding: 60px 120px
-  background-color: $white
-  border-radius: $border-radius
   .bio
     line-height: 23px
     border-radius: $border-radius
-  &.right
-    padding-right: 15px
-  &.left
-    padding-left: 15px
-  img
+    background-color: $white
+    padding: 60px 120px
+  .news-content
+    img
+      background-color: $white
+      border-radius: $border-radius
+      border: 5px solid $white
+  .news-title
+    background-color: $white
     border-radius: $border-radius
-    border: 5px solid $white
+    padding: 60px 30px
+    margin-top: 15px
+    margin-bottom: 15px
 
 
 .btn
@@ -252,8 +257,13 @@ hr
 
 .t1
   @include animation-delay(0.5s)
-  @include animation-duration(1.5s)
+  @include animation-duration(0.75s)
 .t2
-  @include animation-delay(1.25s)
-  @include animation-duration(1.5s)
-
+  @include animation-delay(1s)
+  @include animation-duration(0.75s)
+.t3
+  @include animation-delay(1.5s)
+  @include animation-duration(0.75s)
+.t4
+  @include animation-delay(2s)
+  @include animation-duration(0.75s)

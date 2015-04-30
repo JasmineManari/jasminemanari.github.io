@@ -13,17 +13,19 @@ title : News
   </div>
 </div>
 
-<div class="container-fluid">
-  <div class="row top-overlay">
-    <div class="col-md-offset-2 col-md-8">
-      {% for post in site.posts %}
-        <div class="row block-overlay bottom-buffer center-img">
-          {{ post.content }}
-          <span class="post-date">{{ post.date | date_to_long_string }}</span>
-        </div>
-       {% endfor %}
+<div class="container-fluid top-overlay">
+  {% for post in site.posts %}
+    <div class="row block-overlay bottom-buffer flex">
+      <div class="news-content center-img col-md-offset-2 col-md-3 animated fadeInLeft t{{ forloop.index + 1 }}">
+        {{ post.content }}
+      </div>
+      <div class="news-title col-md-5 animated fadeInRight t{{ forloop.index + 1 }}">
+        <h2>{{ post.title }}</h2>
+        <hr />
+        <span class="post-date">{{ post.date | date_to_long_string }}</span>
+      </div>
     </div>
-  </div>
+  {% endfor %}
 </div>
 
 <div class="space-buffer"></div>

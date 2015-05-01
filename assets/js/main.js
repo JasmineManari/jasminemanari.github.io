@@ -1,8 +1,8 @@
 
 require(["background"], function(background) {
 
-  if (document.getElementById('crew-head')) {
-    background.slideshow('crew-head', 45000);
+  if (document.getElementsByClassName('animated-head').length > 0) {
+    background.slideshow('animated-head', 8000);
   }
 
   var docs = document.getElementsByClassName("cs-button");
@@ -11,6 +11,7 @@ require(["background"], function(background) {
       docs[i].addEventListener("click", function (event) {
 
         document.getElementsByClassName('hidden-block')[0].style.visibility = 'visible';
+        document.getElementsByClassName('hidden-block')[0].classList.add('animated', 'slideInUp', 't0');
 
         var toShow = document.getElementById(event.target.attributes['data-content-show-id'].value);
         var toHide = document.getElementsByClassName('cs-text-active');

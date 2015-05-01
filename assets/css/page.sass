@@ -119,18 +119,19 @@ hr
   @include overlay
   background-position: 50% 40%
   background-image: url(../img/crew-head0.jpg)
-  @include transition(background-image 0.5s ease-in-out)
 .jumbotron-cast
   @include jumbotron
   @include overlay
   background-position: 50% 80%
   background-image: url(../img/cast-head0.jpg)
-  @include transition(background-image 0.5s ease-in-out)
 .jumbotron-news
   @include jumbotron
   @include overlay
   background-position: 50% 30%
   background-image: url(../img/news-head.jpg)
+.animated-head
+  @include transition(background-image 0.5s ease-in-out)
+
 
 
 .center-img
@@ -245,16 +246,17 @@ hr
 
 .cs-text
   display: block
-.cs-text-inactive
-  display: none
-.cs-text-active
-  display: block
+  &.cs-text-inactive
+    display: none
+  &.cs-text-active
+    display: block
 
 .hidden-block
   visibility: hidden
 .post-date
   font-style: italic
-
+.t0
+  @include animation-duration(0.75s)
 .t1
   @include animation-delay(0.5s)
   @include animation-duration(0.75s)

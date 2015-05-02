@@ -131,6 +131,29 @@ hr
   background-image: url(../img/news-head.jpg)
 .animated-head
   @include transition(background-image 0.5s ease-in-out)
+.full-height-synopsis
+  @include overlay
+  background-position: 50% 100%
+  background-repeat: no-repeat
+  background-size: cover
+  top: 50px
+  left: 0
+  right: 0
+  bottom: 0
+  position: absolute
+  background-image: url(../img/synopsis-head.jpg)
+  .caption
+    position: absolute
+    right: 25px
+    bottom: 20%
+    width: 40%
+    text-shadow: 0 0 20px #000
+    h4
+      text-align: right
+      color: $white
+      font-family: $font3
+      &.small
+        font-size: 11px
 
 
 .center-img
@@ -225,6 +248,7 @@ hr
   padding: 0
   text-align: center
   font-family: $font1
+  z-index: 1000
   .menuentry
     display: inline-block
     position: relative
@@ -268,3 +292,6 @@ hr
 .t4
   @include animation-delay(2s)
   @include animation-duration(0.75s)
+.t9
+  @include animation-delay(0.5s)
+  @include animation-duration(2.5s)

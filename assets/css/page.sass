@@ -131,9 +131,9 @@ hr
   background-image: url(../img/news-head.jpg)
 .animated-head
   @include transition(background-image 0.5s ease-in-out)
-.full-height-synopsis
+.full-height-poster
   @include overlay
-  background-position: 50% 100%
+  background-position: 50% 0%
   background-repeat: no-repeat
   background-size: cover
   top: 50px
@@ -141,19 +141,17 @@ hr
   right: 0
   bottom: 0
   position: absolute
-  background-image: url(../img/synopsis-head.jpg)
-  .caption
+  background-image: url(../img/poster-head.jpg)
+  .vote
     position: absolute
-    right: 25px
-    bottom: 20%
-    width: 40%
-    text-shadow: 0 0 20px #000
-    h4
-      text-align: right
-      color: $white
-      font-family: $font3
-      &.small
-        font-size: 11px
+    text-align: center
+    top: 50%
+    left: 40%
+    width: 20%
+    height: 60px
+    vertical-align: middle
+    line-height: 22px
+    margin-top: -30px
 
 
 .center-img
@@ -240,6 +238,40 @@ hr
       @include scale(1, 1, 1)
       border: 2px solid
       opacity: 1
+.inverted-btn
+  cursor: pointer
+  display: inline-block
+  position: relative
+  text-decoration: none
+  font-family: $font3
+  background-color: $white
+  color: $orange
+  padding: 8px 12px
+  line-height: 18px
+  border-radius: $border-radius
+  @include transition(color 0.3s cubic-bezier(0.75, 0, 0.125, 1), background-color 0.3s ease-in-out)
+  &:before
+    cursor: pointer
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    content: ''
+    opacity: 0
+    border-radius: $border-radius
+    border: 1px solid $yellow
+    @include scale(0.6, 0.6, 1)
+    @include transition(opacity 0.3s cubic-bezier(0.75, 0, 0.125, 1), border 0.3s cubic-bezier(0.75, 0, 0.125, 1), transform 0.3s cubic-bezier(0.75, 0, 0.125, 1))
+  &:focus
+    outline: none
+  &:hover
+    color: $yellow
+    background-color: $white
+    &:before
+      @include scale(1, 1, 1)
+      border: 2px solid
+      opacity: 1
 
 
 .menu
@@ -263,7 +295,7 @@ hr
       border-radius: $border-radius
       @include transition(color 0.3s cubic-bezier(0.75, 0, 0.125, 1), background-color 0.5s ease-in-out)
       &:hover
-        color: $orange
+        color: $yellow
         background-color: $white
 
 

@@ -198,7 +198,7 @@
   -webkit-transition-property: $transition-property;
           transition-property: $transition-property;
 }
-@mixin transition-delay($transition-delay) {
+@mixin transition-delay($transition-delay...) {
   -webkit-transition-delay: $transition-delay;
           transition-delay: $transition-delay;
 }

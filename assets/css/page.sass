@@ -26,9 +26,14 @@ footer
   margin-top: -55px
   width: 100%
   clear: both
-  .logo, .copyright
+  .logo
     line-height: 40px
     font-size: 13px
+  .copyright
+    line-height: 40px
+    font-size: 13px
+    @media (max-width: $screen-md - 1)
+      display: none
   img
     margin: 0 5px
     height: 40px
@@ -142,16 +147,22 @@ hr
   bottom: 0
   position: absolute
   background-image: url(../img/poster-head.jpg)
+  @media (max-width: $screen-md - 1)
+    top: 35px
   .vote
     position: absolute
     text-align: center
-    top: 50%
+    top: 35%
     left: 40%
     width: 20%
     height: 60px
     vertical-align: middle
     line-height: 22px
-    margin-top: -30px
+    @media (max-width: $screen-md - 1)
+      top: 35%
+      left: 25%
+      width: 50%
+
 
 
 .center-img
@@ -167,10 +178,18 @@ hr
   padding: 10px
   background-color: $white
   border-radius: $border-radius
+  @media (max-width: $screen-md - 1)
+    padding-bottom: 50px
+    margin-bottom: 20px
+  .btn
+    @media (max-width: $screen-md - 1)
+      margin-left: 7.5px
+      margin-right: 7.5px
 .thumb-overlay
   margin-top: -80px
   border-radius: $border-radius
-  img
+  text-align: center
+  img, iframe
     border-radius: $border-radius
     border: 5px solid $white
 .small-thumb-overlay
@@ -191,6 +210,8 @@ hr
     border-radius: $border-radius
     background-color: $white
     padding: 60px 120px
+    @media (max-width: $screen-md - 1)
+      padding: 60px 30px
   .news-content
     img
       background-color: $white
@@ -261,13 +282,13 @@ hr
     opacity: 0
     border-radius: $border-radius
     border: 1px solid $yellow
-    @include scale3d(0.6, 0.6, 1)
+    @include scale3d(1.4, 1.4, 1)
     @include transition(opacity 0.3s cubic-bezier(0.75, 0, 0.125, 1), border 0.3s cubic-bezier(0.75, 0, 0.125, 1), transform 0.3s cubic-bezier(0.75, 0, 0.125, 1))
   &:focus
     outline: none
   &:hover
     color: $yellow
-    background-color: $white
+    background-color: $dark
     &:before
       @include scale3d(1, 1, 1)
       border: 2px solid
@@ -281,22 +302,36 @@ hr
   text-align: center
   font-family: $font1
   z-index: 1000
+  @media (max-width: $screen-md - 1)
+    font-size: 8px
   .menuentry
-    display: inline-block
     position: relative
+    display: inline-block
     width: 10%
     text-align: center
     cursor: pointer
     a
+      &:after
+        content: ''
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        z-index: -1
+        border-radius: $border-radius
+        background-color: $white
+        @include translate(0, -51px)
+        @include transition(transform 0.6s cubic-bezier(0.18, 0.07, 0.4, 1.4))
       display: block
       padding: 15px 0
       text-decoration: none
       color: $orange
-      border-radius: $border-radius
-      @include transition(color 0.3s cubic-bezier(0.75, 0, 0.125, 1), background-color 0.5s ease-in-out)
+      @include transition(color 0.45s cubic-bezier(0.75, 0, 0.125, 1))
       &:hover
         color: $yellow
-        background-color: $white
+        &:after
+          @include translate(0, 40px)
 
 
 .cs-text
